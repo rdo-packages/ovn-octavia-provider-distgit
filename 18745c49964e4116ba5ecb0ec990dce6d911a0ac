@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2b6d6baf_f87770a8",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-03-18T09:57:55Z",
+      "side": 1,
+      "message": "i see some of these deps are not in https://github.com/openstack/ovn-octavia-provider/blob/master/requirements.txt\n\n2020-03-18 09:49:30.302393 | container | EXCESS:\n2020-03-18 09:49:30.302427 | container |   python-octavia \u003e\u003d 5.0.1\n2020-03-18 09:49:30.302457 | container |   python-oslo-log \u003e\u003d 3.36.0\n2020-03-18 09:49:30.302492 | container |   python-oslo-serialization \u003e\u003d 2.18.0\n2020-03-18 09:49:30.302518 | container |   python-six \u003e\u003d 1.11.0\n2020-03-18 09:49:30.302547 | container |   python-stevedore \u003e\u003d 1.20.0\n\nPlease send upstream patch to fix",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 59
+      },
+      "revId": "18745c49964e4116ba5ecb0ec990dce6d911a0ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f5384280_76b04996",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-03-18T09:57:55Z",
+      "side": 1,
+      "message": "It\u0027s missing some sections, %install, %check, %files, %changelog, etc... see https://github.com/rdo-packages/octavia-lib-distgit/blob/rpm-master/python-octavia-lib.spec as example",
+      "revId": "18745c49964e4116ba5ecb0ec990dce6d911a0ac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
