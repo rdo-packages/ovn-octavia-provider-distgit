@@ -1,0 +1,159 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f3a0409b_345ae10d",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-03-18T12:29:31Z",
+      "side": 1,
+      "message": "You\u0027ll probably need to define a new macro with the name of the python module itself which uses _ instead of -:\n\n%global library ovn_octavia_provider",
+      "revId": "47dd15cab04191a61d24750605635e5c670d76ff",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eaab5b3_f9e4b05a",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-03-18T12:29:31Z",
+      "side": 1,
+      "message": "upstream_name",
+      "range": {
+        "startLine": 89,
+        "startChar": 27,
+        "endLine": 89,
+        "endChar": 34
+      },
+      "revId": "47dd15cab04191a61d24750605635e5c670d76ff",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "02b6af77_a4d9a44a",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-03-18T12:29:31Z",
+      "side": 1,
+      "message": "library",
+      "range": {
+        "startLine": 91,
+        "startChar": 19,
+        "endLine": 91,
+        "endChar": 25
+      },
+      "revId": "47dd15cab04191a61d24750605635e5c670d76ff",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "59393307_a9d98c37",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-03-18T12:29:31Z",
+      "side": 1,
+      "message": "library",
+      "range": {
+        "startLine": 92,
+        "startChar": 19,
+        "endLine": 92,
+        "endChar": 25
+      },
+      "revId": "47dd15cab04191a61d24750605635e5c670d76ff",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b4c7382_a90568e7",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-03-18T12:29:31Z",
+      "side": 1,
+      "message": "library",
+      "range": {
+        "startLine": 93,
+        "startChar": 28,
+        "endLine": 93,
+        "endChar": 34
+      },
+      "revId": "47dd15cab04191a61d24750605635e5c670d76ff",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d571692_df0289bc",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-03-18T12:29:31Z",
+      "side": 1,
+      "message": "upstream_name",
+      "range": {
+        "startLine": 95,
+        "startChar": 27,
+        "endLine": 95,
+        "endChar": 34
+      },
+      "revId": "47dd15cab04191a61d24750605635e5c670d76ff",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e1d32972_46793de1",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-03-18T12:29:31Z",
+      "side": 1,
+      "message": "You are not building html documentation in %build so there is nothing to add in doc subpackage. You can either build the doc if there is meaninful documentation that you want to provide users via rpm package or remove this subpackage.",
+      "range": {
+        "startLine": 99,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 6
+      },
+      "revId": "47dd15cab04191a61d24750605635e5c670d76ff",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
