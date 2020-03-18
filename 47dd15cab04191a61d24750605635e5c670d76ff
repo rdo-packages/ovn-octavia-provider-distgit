@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "fde5ce81_5559eeb8",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 382
+      },
+      "writtenOn": "2020-03-18T14:01:45Z",
+      "side": 1,
+      "message": "If https://review.opendev.org/713658 lands first this can go away",
+      "revId": "47dd15cab04191a61d24750605635e5c670d76ff",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eaab5b3_f9e4b05a",
         "filename": "openstack-ovn-octavia-provider.spec",
         "patchSetId": 5
