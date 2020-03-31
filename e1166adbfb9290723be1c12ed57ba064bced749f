@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b743c89b_1d54671c",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 382
+      },
+      "writtenOn": "2020-03-31T20:57:23Z",
+      "side": 1,
+      "message": "s/openstack",
+      "range": {
+        "startLine": 19,
+        "startChar": 16,
+        "endLine": 19,
+        "endChar": 22
+      },
+      "revId": "e1166adbfb9290723be1c12ed57ba064bced749f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
