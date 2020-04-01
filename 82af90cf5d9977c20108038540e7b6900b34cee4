@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c704742c_1e371699",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 23
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 382
+      },
+      "writtenOn": "2020-04-01T21:14:14Z",
+      "side": 1,
+      "message": "So this little block is still a problem, maybe someone else will have an idea, seems fixable, I\u0027m just done for the day.",
+      "revId": "82af90cf5d9977c20108038540e7b6900b34cee4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
