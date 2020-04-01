@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc36cd3d_a86e4c79",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 207
+      },
+      "writtenOn": "2020-04-01T07:34:25Z",
+      "side": 1,
+      "message": "at first you need to define:\n%package -n python%{pyver}-%{upstream_name}-tests\nand add requirements from test-requirements e.g. https://github.com/rdo-packages/ironic-distgit/blob/rpm-master/openstack-ironic.spec#L325",
+      "revId": "5dd1ef34992c82938215ede003e1cf7ac83446e9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
