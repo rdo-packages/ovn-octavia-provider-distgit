@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "68022b0a_4cea8623",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 22
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 382
+      },
+      "writtenOn": "2020-04-01T21:05:53Z",
+      "side": 1,
+      "message": "So the commenting-out of this and the above section helped, I think I have a typo here with -tests so I\u0027ll try one more time.  Don\u0027t know about the actual running of the tests above, doesn\u0027t seem necessary.",
+      "revId": "a5d0c1259dead0d779da1736c8bcfe4a6caa9d6d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
