@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "a13bbbbd_7a2c060b",
+        "filename": "openstack-ovn-octavia-provider.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 207
+      },
+      "writtenOn": "2020-04-01T07:53:10Z",
+      "side": 1,
+      "message": "Try to add something like before files:\n\n%package -n python%{pyver}-%{upstream_name}-tests\nSummary:        %{sum} unit tests\n%{?python_provide:%python_provide python%{pyver}-%{upstream_name}-tests}\nRequires:       python%{pyver}-%{upstream_name} \u003d %{epoch}:%{version}-%{release}\nRequires:       python%{pyver}-hacking\nRequires:       python%{pyver}-coverage\nRequires:       python%{pyver}-subunit\nRequires:       python%{pyver}-oslotest\nRequires:       python%{pyver}-astroid\nRequires:       python%{pyver}-octavia-lib\nRequires:       python%{pyver}-testresources\nRequires:       python%{pyver}-testscenarios\nRequires:       python%{pyver}-WebTest\nRequires:       python%{pyver}-testtools\nRequires:       python%{pyver}-neutron \u003e\u003d 1:15.0.0\n\n%description -n python%{pyver}-%{upstream_name}-tests\nThis package contains the OVN Octavia test files.",
+      "revId": "5dd1ef34992c82938215ede003e1cf7ac83446e9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fc36cd3d_a86e4c79",
         "filename": "openstack-ovn-octavia-provider.spec",
         "patchSetId": 8
