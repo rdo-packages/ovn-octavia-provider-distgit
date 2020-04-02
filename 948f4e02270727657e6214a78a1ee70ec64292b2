@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f9342b4f_8d4a1921",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 29
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 382
+      },
+      "writtenOn": "2020-04-02T14:30:26Z",
+      "side": 1,
+      "message": "So the ovn-octavia-provider code only supports python3, is this still ok or should it fail here?",
+      "revId": "948f4e02270727657e6214a78a1ee70ec64292b2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
