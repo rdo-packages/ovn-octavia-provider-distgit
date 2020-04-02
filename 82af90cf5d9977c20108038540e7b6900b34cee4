@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "46be1579_0e0b6095",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 23
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-04-02T07:47:49Z",
+      "side": 1,
+      "message": "For consistency with the rest of packages, i\u0027d prefer to put all %files sections at the end of the file",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 42
+      },
+      "revId": "82af90cf5d9977c20108038540e7b6900b34cee4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aaa34bb3_3b29aae1",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 23
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-04-02T07:47:49Z",
+      "side": 1,
+      "message": "For consistency with the rest of packages, i\u0027d prefer to put this before %prep. Usually the specs are organized this way:\n\n1. Definition of common srpm parameters, globals macros, Name, Version, Release, License, Sources, global summary and global description (in this spec from line 1 to 30.\n\n2. Subpackages definition %package, %summary, %requires, %provides, %description etc.. for all subpackages.\n\n3. build time scripts section, %prep, %install, %build, %check\n\n4. Install time scripts (if any), %pre, %post, %preun, %postun\n\n5. Files definition for all subpackages %files\n\n6. %changelog\n\nNote specs can work with a different organization but this has been the convention about specs organization from Fedora and CentOS (although you can find exceptions)",
+      "range": {
+        "startLine": 90,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 49
+      },
+      "revId": "82af90cf5d9977c20108038540e7b6900b34cee4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c704742c_1e371699",
         "filename": "python-ovn-octavia-provider.spec",
         "patchSetId": 23
@@ -13,6 +59,29 @@
       "writtenOn": "2020-04-01T21:14:14Z",
       "side": 1,
       "message": "So this little block is still a problem, maybe someone else will have an idea, seems fixable, I\u0027m just done for the day.",
+      "revId": "82af90cf5d9977c20108038540e7b6900b34cee4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d77fbe44_0fa0d685",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 23
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-04-02T07:47:49Z",
+      "side": 1,
+      "message": "This should be %{library_name}, the actual folder is ovn_octavia_provider",
+      "range": {
+        "startLine": 118,
+        "startChar": 19,
+        "endLine": 118,
+        "endChar": 32
+      },
       "revId": "82af90cf5d9977c20108038540e7b6900b34cee4",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
