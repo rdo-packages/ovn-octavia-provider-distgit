@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f9aa7b24_7629fb09",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 24
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2020-04-02T07:43:37Z",
+      "side": 1,
+      "message": "We could use %{library} here",
+      "range": {
+        "startLine": 118,
+        "startChar": 17,
+        "endLine": 118,
+        "endChar": 37
+      },
+      "revId": "b4de0e4bd7585ab5e205796660623b0b180318e0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
