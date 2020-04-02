@@ -85,6 +85,30 @@
       "revId": "82af90cf5d9977c20108038540e7b6900b34cee4",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "839613b8_c3898de3",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 23
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-04-02T07:48:33Z",
+      "side": 1,
+      "message": "i meant %{library}",
+      "parentUuid": "d77fbe44_0fa0d685",
+      "range": {
+        "startLine": 118,
+        "startChar": 19,
+        "endLine": 118,
+        "endChar": 32
+      },
+      "revId": "82af90cf5d9977c20108038540e7b6900b34cee4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
