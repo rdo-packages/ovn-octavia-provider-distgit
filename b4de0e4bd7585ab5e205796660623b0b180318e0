@@ -2,6 +2,75 @@
   "comments": [
     {
       "key": {
+        "uuid": "e5b3e51c_ae2564e2",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 24
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-04-02T07:55:39Z",
+      "side": 1,
+      "message": "iiuc astroid is used for syntax check, which is not run at packaging.",
+      "range": {
+        "startLine": 99,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 38
+      },
+      "revId": "b4de0e4bd7585ab5e205796660623b0b180318e0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4900a8c0_208852d5",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 24
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-04-02T07:55:39Z",
+      "side": 1,
+      "message": "python%{pyver}-webtest",
+      "range": {
+        "startLine": 102,
+        "startChar": 16,
+        "endLine": 102,
+        "endChar": 38
+      },
+      "revId": "b4de0e4bd7585ab5e205796660623b0b180318e0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa4e5f6c_a9512122",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 24
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-04-02T07:55:39Z",
+      "side": 1,
+      "message": "it\u0027s recommended to run unit tests in %check section unless there is some justification to avoid it.",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 50
+      },
+      "revId": "b4de0e4bd7585ab5e205796660623b0b180318e0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f9aa7b24_7629fb09",
         "filename": "python-ovn-octavia-provider.spec",
         "patchSetId": 24
