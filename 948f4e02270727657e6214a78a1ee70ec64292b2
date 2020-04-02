@@ -16,6 +16,24 @@
       "revId": "948f4e02270727657e6214a78a1ee70ec64292b2",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "279de12c_38b35772",
+        "filename": "python-ovn-octavia-provider.spec",
+        "patchSetId": 29
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2020-04-02T14:35:24Z",
+      "side": 1,
+      "message": "We will have to go through a general cleanup of these macros once stable/ussuri is branched, so we can leave it here for now.",
+      "parentUuid": "f9342b4f_8d4a1921",
+      "revId": "948f4e02270727657e6214a78a1ee70ec64292b2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
