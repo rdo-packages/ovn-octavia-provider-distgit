@@ -59,6 +59,7 @@ OVN Octavia provider is OVN driver for Openstack Octavia.
 %package -n python%{pyver}-%{upstream_name}-tests
 Summary:  %{sum} unit tests
 %{?python_provide:%python_provide python%{pyver}-%{upstream_name}-tests}
+BuildRequires:  python%{pyver}-hacking
 BuildRequires:  python%{pyver}-neutron-tests
 BuildRequires:  python%{pyver}-neutron-lib-tests
 BuildRequires:  python%{pyver}-octavia-lib
@@ -75,6 +76,7 @@ BuildRequires:  python%{pyver}-testtools
 BuildRequires:  python%{pyver}-webtest
 
 Requires: python%{pyver}-%{upstream_name} = %{version}-%{release}
+Requires: python%{pyver}-hacking >= 3.0.0
 Requires: python%{pyver}-neutron-tests >= 1:15.0.0
 Requires: python%{pyver}-neutron-lib-tests >= 1.28.0
 Requires: python%{pyver}-oslotest >= 3.2.0
@@ -105,7 +107,6 @@ rm -rf %{buildroot}%{_datadir}/%{library}/LICENSE
 rm -rf %{buildroot}%{_datadir}/%{library}/README.rst
 
 %check
-rm -f ./ovn_octavia_provider/tests/unit/hacking/test_checks.py
 export OS_TEST_PATH='./ovn_octavia_provider/tests/unit'
 export PATH=$PATH:%{buildroot}/usr/bin
 export PYTHONPATH=$PWD
