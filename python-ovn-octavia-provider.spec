@@ -1,15 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 
 %{!?upstream_version: %global upstream_version %{version}}
 %global upstream_name ovn-octavia-provider
@@ -29,62 +17,61 @@ BuildArch:      noarch
 %description
 OVN Octavia provider is OVN driver for Openstack Octavia.
 
-%package -n     python%{pyver}-%{upstream_name}
+%package -n     python3-%{upstream_name}
 Summary:        %{sum}
-%{?python_provide:%python_provide python%{pyver}-%{upstream_name}}
+%{?python_provide:%python_provide python3-%{upstream_name}}
 
 BuildRequires:  git
 BuildRequires:  openstack-macros
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-pbr >= 2.0.0
+BuildRequires:  python3-devel
+BuildRequires:  python3-pbr >= 2.0.0
 
-Requires:       python%{pyver}-babel >= 2.3.4
-Requires:       python%{pyver}-keystoneauth1 >= 3.4.0
-Requires:       python%{pyver}-netaddr >= 0.7.18
-Requires:       python%{pyver}-neutron-lib >= 1.28.0
-Requires:       python%{pyver}-neutronclient >= 6.7.0
-Requires:       python%{pyver}-octavia-lib >= 1.3.1
-Requires:       python%{pyver}-openvswitch >= 2.8.0
-Requires:       python%{pyver}-oslo-config >= 2:5.2.0
-Requires:       python%{pyver}-oslo-log >= 3.36.0
-Requires:       python%{pyver}-oslo-utils >= 3.33.0
-Requires:       python%{pyver}-oslo-serialization >= 2.18.0
-Requires:       python%{pyver}-ovsdbapp >= 0.17.0
-Requires:       python%{pyver}-pbr >= 2.0.0
-Requires:       python%{pyver}-tenacity >= 4.4.0
-
-%description -n python%{pyver}-%{upstream_name}
+Requires:       python3-babel >= 2.3.4
+Requires:       python3-keystoneauth1 >= 3.4.0
+Requires:       python3-netaddr >= 0.7.18
+Requires:       python3-neutron-lib >= 1.28.0
+Requires:       python3-neutronclient >= 6.7.0
+Requires:       python3-octavia-lib >= 1.3.1
+Requires:       python3-openvswitch >= 2.8.0
+Requires:       python3-oslo-config >= 2:5.2.0
+Requires:       python3-oslo-log >= 3.36.0
+Requires:       python3-oslo-utils >= 3.33.0
+Requires:       python3-oslo-serialization >= 2.28.1
+Requires:       python3-ovsdbapp >= 0.17.0
+Requires:       python3-pbr >= 2.0.0
+Requires:       python3-tenacity >= 5.0.2
+%description -n python3-%{upstream_name}
 OVN Octavia provider is OVN driver for Openstack Octavia.
 
-%package -n python%{pyver}-%{upstream_name}-tests
+%package -n python3-%{upstream_name}-tests
 Summary:  %{sum} unit tests
-%{?python_provide:%python_provide python%{pyver}-%{upstream_name}-tests}
-BuildRequires:  python%{pyver}-neutron-tests
-BuildRequires:  python%{pyver}-neutron-lib-tests
-BuildRequires:  python%{pyver}-octavia-lib
-BuildRequires:  python%{pyver}-oslo-config
-BuildRequires:  python%{pyver}-oslo-log
-BuildRequires:  python%{pyver}-oslo-serialization
-BuildRequires:  python%{pyver}-oslotest
-BuildRequires:  python%{pyver}-ovsdbapp
-BuildRequires:  python%{pyver}-stestr
-BuildRequires:  python%{pyver}-tenacity
-BuildRequires:  python%{pyver}-testresources
-BuildRequires:  python%{pyver}-testscenarios
-BuildRequires:  python%{pyver}-testtools
-BuildRequires:  python%{pyver}-webtest
+%{?python_provide:%python_provide python3-%{upstream_name}-tests}
+BuildRequires:  python3-neutron-tests
+BuildRequires:  python3-neutron-lib-tests
+BuildRequires:  python3-octavia-lib
+BuildRequires:  python3-oslo-config
+BuildRequires:  python3-oslo-log
+BuildRequires:  python3-oslo-serialization
+BuildRequires:  python3-oslotest
+BuildRequires:  python3-ovsdbapp
+BuildRequires:  python3-stestr
+BuildRequires:  python3-tenacity
+BuildRequires:  python3-testresources
+BuildRequires:  python3-testscenarios
+BuildRequires:  python3-testtools
+BuildRequires:  python3-webtest
 
-Requires: python%{pyver}-%{upstream_name} = %{version}-%{release}
-Requires: python%{pyver}-neutron-tests >= 1:15.0.0
-Requires: python%{pyver}-neutron-lib-tests >= 1.28.0
-Requires: python%{pyver}-oslotest >= 3.2.0
-Requires: python%{pyver}-stestr >= 1.0.0
-Requires: python%{pyver}-testresources
-Requires: python%{pyver}-testscenarios >= 0.4
-Requires: python%{pyver}-testtools >= 2.2.0
-Requires: python%{pyver}-webtest >= 2.0.27
+Requires: python3-%{upstream_name} = %{version}-%{release}
+Requires: python3-neutron-tests >= 1:15.0.0
+Requires: python3-neutron-lib-tests >= 1.28.0
+Requires: python3-oslotest >= 3.2.0
+Requires: python3-stestr >= 1.0.0
+Requires: python3-testresources
+Requires: python3-testscenarios >= 0.4
+Requires: python3-testtools >= 2.2.0
+Requires: python3-webtest >= 2.0.27
 
-%description -n python%{pyver}-%{upstream_name}-tests
+%description -n python3-%{upstream_name}-tests
 This package contains the OVN Octavia test files.
 
 %prep
@@ -95,10 +82,10 @@ This package contains the OVN Octavia test files.
 %py_req_cleanup
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %install
-%{pyver_install}
+%{py3_install}
 
 # Remove setuptools installed data_files
 rm -rf %{buildroot}%{_datadir}/%{library}/LICENSE
@@ -109,16 +96,16 @@ rm -f ./ovn_octavia_provider/tests/unit/hacking/test_checks.py
 export OS_TEST_PATH='./ovn_octavia_provider/tests/unit'
 export PATH=$PATH:%{buildroot}/usr/bin
 export PYTHONPATH=$PWD
-PYTHON=%{pyver_bin} stestr --test-path $OS_TEST_PATH run
+PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
 
-%files -n python%{pyver}-%{upstream_name}-tests
+%files -n python3-%{upstream_name}-tests
 %license LICENSE
-%{pyver_sitelib}/%{library}/tests
+%{python3_sitelib}/%{library}/tests
 
-%files -n python%{pyver}-%{upstream_name}
+%files -n python3-%{upstream_name}
 %license LICENSE
-%{pyver_sitelib}/%{library}
-%{pyver_sitelib}/%{library}-*.egg-info
-%exclude %{pyver_sitelib}/%{library}/tests
+%{python3_sitelib}/%{library}
+%{python3_sitelib}/%{library}-*.egg-info
+%exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
