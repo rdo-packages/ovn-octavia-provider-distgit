@@ -6,8 +6,8 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        XXX
-Release:        XXX
+Version:        0.1.0
+Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/ovn-octavia-provider
 Source0:        https://tarballs.opendev.org/openstack/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
@@ -109,3 +109,6 @@ PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
+* Thu May 07 2020 RDO <dev@lists.rdoproject.org> 0.1.0-1
+- Update to 0.1.0
+
