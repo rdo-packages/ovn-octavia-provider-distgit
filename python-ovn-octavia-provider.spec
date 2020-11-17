@@ -33,7 +33,7 @@ OVN Octavia provider is OVN driver for Openstack Octavia.
 Summary:        %{sum}
 %{?python_provide:%python_provide python3-%{upstream_name}}
 
-BuildRequires:  git
+BuildRequires:  git-core
 BuildRequires:  openstack-macros
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr >= 2.0.0
