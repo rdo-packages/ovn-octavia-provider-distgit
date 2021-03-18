@@ -38,19 +38,19 @@ BuildRequires:  openstack-macros
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr >= 2.0.0
 
-Requires:       python3-keystoneauth1 >= 3.4.0
+Requires:       python3-keystoneauth1 >= 3.14.0
 Requires:       python3-netaddr >= 0.7.18
-Requires:       python3-neutron-lib >= 2.1.0
+Requires:       python3-neutron-lib >= 2.2.0
 Requires:       python3-neutronclient >= 6.7.0
-Requires:       python3-octavia-lib >= 1.3.1
+Requires:       python3-octavia-lib >= 2.2.0
 Requires:       python3-openvswitch >= 2.8.0
-Requires:       python3-oslo-config >= 2:5.2.0
+Requires:       python3-oslo-config >= 2:6.0.0
 Requires:       python3-oslo-log >= 3.36.0
-Requires:       python3-oslo-utils >= 3.33.0
+Requires:       python3-oslo-utils >= 4.5.0
 Requires:       python3-oslo-serialization >= 2.28.1
-Requires:       python3-ovsdbapp >= 0.17.0
-Requires:       python3-pbr >= 2.0.0
-Requires:       python3-tenacity >= 5.0.2
+Requires:       python3-ovsdbapp >= 1.3.0
+Requires:       python3-pbr >= 4.0.0
+Requires:       python3-tenacity >= 6.0.0
 Requires:       python3-sqlalchemy >= 1.2.19
 Requires:       python3-oslo-messaging >= 12.4.0
 %description -n python3-%{upstream_name}
