@@ -6,7 +6,7 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        0.1.0
+Version:        0.1.3
 Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/ovn-octavia-provider
@@ -109,6 +109,9 @@ PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
+* Tue Jul 27 2021 RDO <dev@lists.rdoproject.org> 0.1.3-1
+- Update to 0.1.3
+
 * Thu May 07 2020 RDO <dev@lists.rdoproject.org> 0.1.0-1
 - Update to 0.1.0
 
