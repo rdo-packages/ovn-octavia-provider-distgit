@@ -136,3 +136,4 @@ PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
 * Fri Sep 25 2020 RDO <dev@lists.rdoproject.org> 0.3.0-1
 - Update to 0.3.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/ovn-octavia-provider/commit/a321a6aa40bf0dc8b26270cf66f0ee8a29c754b5
