@@ -51,7 +51,7 @@ Requires:       python3-oslo-serialization >= 2.28.1
 Requires:       python3-ovsdbapp >= 1.7.0
 Requires:       python3-pbr >= 4.0.0
 Requires:       python3-tenacity >= 6.0.0
-Requires:       python3-sqlalchemy >= 1.3.2
+Requires:       python3-sqlalchemy >= 1.4.23
 Requires:       python3-oslo-messaging >= 12.4.0
 %description -n python3-%{upstream_name}
 OVN Octavia provider is OVN driver for Openstack Octavia.
