@@ -1,18 +1,23 @@
+%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
-%{!?upstream_version: %global upstream_version %{version}}
 %global upstream_name ovn-octavia-provider
 %global sum OVN provider driver for Openstack Octavia
 %global library ovn_octavia_provider
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        XXX
-Release:        XXX
+Version:        3.0.0
+Release:        0.1%{?milestone}%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/ovn-octavia-provider
 Source0:        https://tarballs.opendev.org/openstack/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
+#
+# patches_base=3.0.0.0rc1
+#
+
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.opendev.org/openstack/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz.asc
@@ -126,3 +131,6 @@ PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
+* Fri Sep 16 2022 RDO <dev@lists.rdoproject.org> 3.0.0-0.1.0rc1
+- Update to 3.0.0.0rc1
+
