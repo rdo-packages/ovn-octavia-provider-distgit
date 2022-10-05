@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -10,12 +9,10 @@
 Name:           python-%{upstream_name}
 Summary:        %{sum}
 Version:        3.0.0
-Release:        0.1%{?milestone}%{?dist}
+Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/ovn-octavia-provider
 Source0:        https://tarballs.opendev.org/openstack/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
-#
-# patches_base=3.0.0.0rc1
 #
 
 # Required for tarball sources verification
@@ -131,6 +128,9 @@ PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
+* Wed Oct 05 2022 RDO <dev@lists.rdoproject.org> 3.0.0-1
+- Update to 3.0.0
+
 * Fri Sep 16 2022 RDO <dev@lists.rdoproject.org> 3.0.0-0.1.0rc1
 - Update to 3.0.0.0rc1
 
