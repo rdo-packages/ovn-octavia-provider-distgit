@@ -1,0 +1,8 @@
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Tue, 08 Nov 2022 08:32:00 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ovn-octavia-provider-distgit/+/45914
+Project: openstack/ovn-octavia-provider-distgit
+Branch: refs/heads/wallaby-rdo
