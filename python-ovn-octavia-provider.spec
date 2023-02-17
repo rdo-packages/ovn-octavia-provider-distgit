@@ -126,3 +126,4 @@ PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/ovn-octavia-provider/commit/54d96ca07237dff8bccdaf4a9d5492f9103ea261
