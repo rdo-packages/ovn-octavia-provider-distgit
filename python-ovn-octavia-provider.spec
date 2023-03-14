@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363
+%global sources_gpg_sign 0xa7475c5f2122fec3f90343223fe3bf5aad1080e4
 
 %{!?upstream_version: %global upstream_version %{version}}
 %global upstream_name ovn-octavia-provider
@@ -8,7 +8,7 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        2.0.0
+Version:        2.1.0
 Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/ovn-octavia-provider
@@ -126,6 +126,9 @@ PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
+* Tue Mar 14 2023 RDO <dev@lists.rdoproject.org> 2.1.0-1
+- Update to 2.1.0
+
 * Wed Mar 30 2022 RDO <dev@lists.rdoproject.org> 2.0.0-1
 - Update to 2.0.0
 
