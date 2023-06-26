@@ -1,6 +1,8 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+# we are excluding some BRs from automatic generator
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order pylint
 
 %global upstream_name ovn-octavia-provider
 %global sum OVN provider driver for Openstack Octavia
@@ -10,7 +12,7 @@ Name:           python-%{upstream_name}
 Summary:        %{sum}
 Version:        XXX
 Release:        XXX
-License:        ASL 2.0
+License:        Apache-2.0
 URL:            https://opendev.org/openstack/ovn-octavia-provider
 Source0:        https://tarballs.opendev.org/openstack/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
 # Required for tarball sources verification
@@ -31,50 +33,20 @@ OVN Octavia provider is OVN driver for Openstack Octavia.
 
 %package -n     python3-%{upstream_name}
 Summary:        %{sum}
-%{?python_provide:%python_provide python3-%{upstream_name}}
 
 BuildRequires:  git-core
 BuildRequires:  openstack-macros
 BuildRequires:  python3-devel
-BuildRequires:  python3-pbr >= 4.0.0
+BuildRequires:  pyproject-rpm-macros
 
-Requires:       python3-keystoneauth1 >= 3.14.0
-Requires:       python3-netaddr >= 0.7.18
-Requires:       python3-neutron-lib >= 2.16.0
-Requires:       python3-neutronclient >= 6.7.0
-Requires:       python3-octavia-lib >= 2.2.0
-Requires:       python3-openvswitch >= 2.10.0
-Requires:       python3-oslo-config >= 2:8.0.0
-Requires:       python3-oslo-log >= 4.3.0
-Requires:       python3-oslo-utils >= 4.5.0
-Requires:       python3-oslo-serialization >= 2.28.1
-Requires:       python3-ovsdbapp >= 1.7.0
-Requires:       python3-pbr >= 4.0.0
-Requires:       python3-tenacity >= 6.0.0
-Requires:       python3-sqlalchemy >= 1.4.23
-Requires:       python3-oslo-messaging >= 12.4.0
 %description -n python3-%{upstream_name}
 OVN Octavia provider is OVN driver for Openstack Octavia.
 
 %package -n python3-%{upstream_name}-tests
 Summary:  %{sum} unit tests
-%{?python_provide:%python_provide python3-%{upstream_name}-tests}
+Requires: python3-%{upstream_name} = %{version}-%{release}
 BuildRequires:  python3-neutron-tests
 BuildRequires:  python3-neutron-lib-tests
-BuildRequires:  python3-octavia-lib
-BuildRequires:  python3-oslo-config
-BuildRequires:  python3-oslo-log
-BuildRequires:  python3-oslo-serialization
-BuildRequires:  python3-oslotest
-BuildRequires:  python3-ovsdbapp
-BuildRequires:  python3-stestr
-BuildRequires:  python3-tenacity
-BuildRequires:  python3-testresources
-BuildRequires:  python3-testscenarios
-BuildRequires:  python3-testtools
-BuildRequires:  python3-webtest
-
-Requires: python3-%{upstream_name} = %{version}-%{release}
 Requires: python3-neutron-tests >= 1:15.0.0
 Requires: python3-neutron-lib-tests >= 1.28.0
 Requires: python3-oslotest >= 3.2.0
@@ -94,15 +66,29 @@ This package contains the OVN Octavia test files.
 %endif
 %autosetup -n %{upstream_name}-%{upstream_version} -S git
 
-# Remove the requirements file so that pbr hooks don't add it
-# to distutils requires_dist config
-%py_req_cleanup
+
+sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
+sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
+sed -i /^minversion.*/d tox.ini
+sed -i /^requires.*virtualenv.*/d tox.ini
+
+# Exclude some bad-known BRs
+for pkg in %{excluded_brs};do
+  for reqfile in doc/requirements.txt test-requirements.txt; do
+    if [ -f $reqfile ]; then
+      sed -i /^${pkg}.*/d $reqfile
+    fi
+  done
+done
+
+%generate_buildrequires
+%pyproject_buildrequires -t -e %{default_toxenv}
 
 %build
-%{py3_build}
+%pyproject_wheel
 
 %install
-%{py3_install}
+%pyproject_install
 
 # Remove setuptools installed data_files
 rm -rf %{buildroot}%{_datadir}/%{library}/LICENSE
@@ -113,7 +99,7 @@ rm -f ./ovn_octavia_provider/tests/unit/hacking/test_checks.py
 export OS_TEST_PATH='./ovn_octavia_provider/tests/unit'
 export PATH=$PATH:%{buildroot}/usr/bin
 export PYTHONPATH=$PWD
-PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
+%tox -e %{default_toxenv}
 
 %files -n python3-%{upstream_name}-tests
 %license LICENSE
@@ -122,7 +108,7 @@ PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
 %files -n python3-%{upstream_name}
 %license LICENSE
 %{python3_sitelib}/%{library}
-%{python3_sitelib}/%{library}-*.egg-info
+%{python3_sitelib}/%{library}-*.dist-info
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
