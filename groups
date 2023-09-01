@@ -1,9 +1,9 @@
 # UUID Group Name
 global:Registered-Users	Registered Users
-2a439a04db4a0cc2031b75f96dd3b3242b10a4a3	openstack/ovn-octavia-provider-core
-4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
-05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
 6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Service Users
-d9a0b369d98aaba661e8203de167d3046bad27e0	openstack/ovn-octavia-provider-ptl
 401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
 global:Anonymous-Users	Anonymous Users
+2a439a04db4a0cc2031b75f96dd3b3242b10a4a3	openstack/ovn-octavia-provider-core
+d9a0b369d98aaba661e8203de167d3046bad27e0	openstack/ovn-octavia-provider-ptl
+4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
+05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
