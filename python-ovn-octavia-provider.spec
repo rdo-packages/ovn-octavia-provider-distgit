@@ -102,6 +102,7 @@ rm -f ./ovn_octavia_provider/tests/unit/hacking/test_checks.py
 %license LICENSE
 %{python3_sitelib}/%{library}
 %{python3_sitelib}/%{library}-*.dist-info
+%{_bindir}/octavia-ovn-db-sync-util
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
