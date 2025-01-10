@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b3ca748_074ef1d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-01-10T11:11:30Z",
+      "side": 1,
+      "message": "could you add the upstream patch URL or Change-id in the commit message as reference please ? It might help in the future",
+      "revId": "e470fa272d2ea28b3645b36fcbbdf2b8b11e59c6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
