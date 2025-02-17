@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
+%global sources_gpg_sign 0x22284f69d9eccdf3df7819791c711af193ff8e54
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order pylint
@@ -10,7 +10,7 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        5.0.0
+Version:        5.1.0
 Release:        1%{?dist}
 License:        Apache-2.0
 URL:            https://opendev.org/openstack/ovn-octavia-provider
@@ -106,6 +106,9 @@ rm -f ./ovn_octavia_provider/tests/unit/hacking/test_checks.py
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
+* Mon Feb 17 2025 RDO <dev@lists.rdoproject.org> 5.1.0-1
+- Update to 5.1.0
+
 * Wed Oct 04 2023 RDO <dev@lists.rdoproject.org> 5.0.0-1
 - Update to 5.0.0
 
