@@ -6,6 +6,10 @@
 %global sum OVN provider driver for Openstack Octavia
 %global library ovn_octavia_provider
 
+# guard for Red Hat OpenStack Platform supported ovn-octavia-provider
+# (Antelope only)
+%global rhosp 0
+
 Name:           python-%{upstream_name}
 Summary:        %{sum}
 Version:        4.0.2
@@ -124,6 +128,9 @@ PYTHON=%{__python3} stestr --test-path $OS_TEST_PATH run
 %license LICENSE
 %{python3_sitelib}/%{library}
 %{python3_sitelib}/%{library}-*.egg-info
+%if 0%{?rhosp}
+%{_bindir}/octavia-ovn-db-sync-util
+%endif
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
