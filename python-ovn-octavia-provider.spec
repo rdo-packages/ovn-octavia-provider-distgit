@@ -108,3 +108,4 @@ rm -f ./ovn_octavia_provider/tests/unit/hacking/test_checks.py
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/ovn-octavia-provider/commit/bffcc4caf0fe648dd46f918111a5781611579b2d
