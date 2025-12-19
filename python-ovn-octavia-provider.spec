@@ -116,3 +116,4 @@ rm -f ./ovn_octavia_provider/tests/unit/hacking/test_checks.py
 * Fri Mar 14 2025 RDO <dev@lists.rdoproject.org> 8.0.0-0.1.0rc1
 - Update to 8.0.0.0rc1
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/ovn-octavia-provider/commit/0aee7b4c80331b60b151a607a97c15e88595eca2
