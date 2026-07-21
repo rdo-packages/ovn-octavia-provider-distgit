@@ -12,7 +12,7 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        8.0.0
+Version:        8.1.0
 Release:        1%{?dist}
 License:        Apache-2.0
 URL:            https://opendev.org/openstack/ovn-octavia-provider
@@ -110,6 +110,9 @@ rm -f ./ovn_octavia_provider/tests/unit/hacking/test_checks.py
 %exclude %{python3_sitelib}/%{library}/tests
 
 %changelog
+* Tue Jul 21 2026 RDO <dev@lists.rdoproject.org> 8.1.0-1
+- Update to 8.1.0
+
 * Wed Apr 02 2025 RDO <dev@lists.rdoproject.org> 8.0.0-1
 - Update to 8.0.0
 
